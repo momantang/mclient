@@ -33,7 +33,6 @@ Temporary Items
 # Distribution / packaging
 .Python
 env/
-build/
 develop-eggs/
 dist/
 downloads/
@@ -60,3 +59,5 @@ var/
 
 # Briefcase log files
 logs/
+.gitignore
+build/mclient/android/gradle/gradle/wrapper/gradle-wrapper.jar

@@ -1,0 +1,3 @@
+# Generated 2024-09-24 14:54:06.705982
+toga-android~=0.4.5
+requests
