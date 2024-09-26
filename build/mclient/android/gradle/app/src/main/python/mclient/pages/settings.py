@@ -35,6 +35,7 @@ class SettingsPage:
     
     
     def go_back(self,widget):
-        self.app.show_main()
+        #self.app.show_main()
+        print("go_back")
     def __del__(self):
         self.db.close()

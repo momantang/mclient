@@ -9,6 +9,32 @@ from mclient.pages.settings import SettingsPage
 sys.path.insert(0, os.path.dirname(__file__))
 from . import Config
 
+
+webview=toga.WebView()
+
+room1=toga.Box()
+room2=toga.Box()
+
+
+
+class MainApp(toga.App):
+    def startup(self) -> None:
+        self.settings=SettingsPage(self).get_content()
+        self.main_window=toga.MainWindow(title="M")
+        # Create 2 initial tabs; one with an icon, and one without.
+        container = toga.OptionContainer(
+            content=[
+                toga.OptionItem("web", webview),
+                #toga.OptionItem("room1", room1),
+                #toga.OptionItem("room2", room2),
+                toga.OptionItem("settings", self.settings)
+            ]
+        )
+        self.main_window.content=container
+        # Request a URL be loaded in the webview.
+        webview.url = "https://mpi.cpolar.top/weather"
+
+""""
 class MainApp(toga.App):
     def startup(self) :
         self.main_window=toga.MainWindow(title=self.formal_name)
@@ -32,6 +58,7 @@ class MainApp(toga.App):
     def show_main(self):
         self.main_window.content=self.main_box
     
+"""
 
 
 
